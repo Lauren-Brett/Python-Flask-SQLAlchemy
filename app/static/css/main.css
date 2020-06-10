@@ -18,10 +18,8 @@ body {
 }
 
 .todo {
-    
     border: lightgray solid 1.5px;
     padding: 2%;
-   
 }
 
 .todo label {
