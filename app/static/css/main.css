@@ -10,8 +10,7 @@ body {
    width: 80%;
     margin-left: 5em;
     margin-bottom: 5%;
-  
-    
+ 
 }
 .description {
     margin-left: 3%;
@@ -20,7 +19,8 @@ body {
 .todo {
     border: lightgray solid 1.5px;
     padding: 2%;
-}
+    margin-right: 30%;
+}   
 
 .todo label {
     font-weight: bold;
@@ -62,8 +62,7 @@ body {
 .wrap-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right: 60%;
-   
+    margin-right: 80%;
 }
 
 .add-task-div {
