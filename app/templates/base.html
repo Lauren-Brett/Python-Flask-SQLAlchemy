@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{{title}} - to do list</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <!-- block telling the content block to render, can have multiple blocks -->
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
