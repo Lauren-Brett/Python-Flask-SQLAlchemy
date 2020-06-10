@@ -1,18 +1,68 @@
 body {
-    background-color: rgb(242, 242, 233);
+    background-color: rgb(242, 242, 242);
 }
 
+.add-form input{
+   margin-right: 2%
+
+}
 .container {
-   width: auto;
+   width: 80%;
     margin-left: 5em;
+    margin-bottom: 5%;
+  
     
 }
 .description {
     margin-left: 3%;
 }
-h2 {
-    color: red;
-}
+
 .todo {
-    border: lightgray solid 1px;
+    
+    border: lightgray solid 1.5px;
+    padding: 2%;
+   
 }
+
+.todo label {
+    font-weight: bold;
+}
+
+.add-todo {
+    margin: 3%;
+}
+
+.list-title {
+    margin: 3%;
+}
+
+.submit-button {
+    border-radius: 10%;
+    margin-top: 2%;
+    margin-left: 3%;
+    background-color: lightskyblue;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.delete-button {
+    border-radius: 10%;
+    background-color: rgb(187, 92, 92);
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.still-todo-button {
+    border-radius: 10%;
+    background-color: rgb(245, 229, 139);
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.wrap-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 60%;
+   
+}
+

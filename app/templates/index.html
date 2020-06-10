@@ -5,18 +5,18 @@
 <h1>
     Hello: <em>{{user.username}}</em>
 </h1>
-<div class="">
+<div class="add-todo">
     <h2>Add New To Do:</h2>
-<form action="/tasks" method="POST">
+<form class="add-form" action="/tasks" method="POST">
     <label for="title">Title:</label>
     <input type="text" name="title" id="title" />
-        <label for="description">Description:
-        <textarea name="description" id="description" rows="3" cols="80"></textarea></label>
-    <input type="submit" value="Add Task">
+    <label for="description">Description:
+    <textarea name="description" id="description" rows="3" cols="60"></textarea></label>
+    <input class="submit-button" type="submit" value="Add Task">
   </form>
 </div>
 
-<h2>This is your to do list:</h2>
+<h2 class="list-title">This is your to do list:</h2>
 
 {% for task in tasks %}
 <div class="container">
@@ -25,23 +25,26 @@
        <label> {{task.title}}: </label> 
        <p class="description">{{task.description}}</p>
     </div>
+    <div class="wrap-buttons">
+   
         {% if task.done %}
         <span>&#9989;</span>
         {%else %}
 
         <span>
             <form action="/tasks/{{task.id}}" method="POST">
-                <input type="submit" value="Mark as complete">
+                <input class="still-todo-button" type="submit" value="Mark as complete">
             </form>
         </span>
         {% endif %}
+
         <span>
             <form action="/tasks/{{task.id}}/delete" method="POST">
                 <input type="hidden" value="{{task.id}}" >
-                <input type="submit" value="Delete">
+                <input class="delete-button" type="submit" value="Delete">
             </form>
         </span>
-    
+    </div>
 </div>
 {% endfor %}
 
