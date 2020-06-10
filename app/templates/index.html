@@ -5,7 +5,8 @@
 <h1>
     Hello: <em>{{user.username}}</em>
 </h1>
-<h2>Add New To Do:</h2>
+<div class="">
+    <h2>Add New To Do:</h2>
 <form action="/tasks" method="POST">
     <label for="title">Title:</label>
     <input type="text" name="title" id="title" />
@@ -13,17 +14,21 @@
         <textarea name="description" id="description" rows="3" cols="80"></textarea></label>
     <input type="submit" value="Add Task">
   </form>
+</div>
 
-<h2 style="color: red">This is your to do list:</h2>
+<h2>This is your to do list:</h2>
 
 {% for task in tasks %}
-<div style="margin-left: 5em;">
+<div class="container">
  
-    <p>
-        {{task.title}}: <b>{{task.description}}</b>
+    <div class="todo">
+       <label> {{task.title}}: </label> 
+       <p class="description">{{task.description}}</p>
+    </div>
         {% if task.done %}
         <span>&#9989;</span>
         {%else %}
+
         <span>
             <form action="/tasks/{{task.id}}" method="POST">
                 <input type="submit" value="Mark as complete">
@@ -36,8 +41,11 @@
                 <input type="submit" value="Delete">
             </form>
         </span>
-    </p>
+    
 </div>
 {% endfor %}
+
+
+
 
 {% endblock%}
