@@ -10,9 +10,11 @@
 <form class="add-form" action="/tasks" method="POST">
     <label for="title">Title:</label>
     <input type="text" name="title" id="title" />
-    <label for="description">Description:
-    <textarea name="description" id="description" rows="3" cols="60"></textarea></label>
-    <input class="submit-button" type="submit" value="Add Task">
+    <div class="description-label">
+        <label  for="description">Description:</label>
+        <textarea name="description" id="description" cols="60"></textarea>
+    </div>
+    <div class="add-task-div"> <input class="submit-button" type="submit" value="Add Task"></div>
   </form>
 </div>
 

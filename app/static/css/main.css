@@ -36,11 +36,8 @@ body {
 
 .submit-button {
     border-radius: 10%;
-    margin-top: 2%;
-    margin-left: 3%;
     background-color: lightskyblue;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 1%
 }
 
 .delete-button {
@@ -62,5 +59,14 @@ body {
     grid-template-columns: 1fr 1fr;
     margin-right: 60%;
    
+}
+
+.add-task-div {
+    margin-top: 3%;
+}
+
+.description-label * {
+    margin-top: 2%;
+    vertical-align: middle;
 }
 
