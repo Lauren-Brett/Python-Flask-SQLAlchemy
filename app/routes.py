@@ -35,4 +35,11 @@ def update(task_id):
     task = Task.query.get(task_id)
     task.done = True
     db.session.commit()
-    return redirect("/")
+    return redirect('/')
+
+@app.route('/tasks/<int:task_id>/delete', methods=['POST'])
+def delete(task_id):
+    task = Task.query.get(task_id)
+    db.session.delete(task)
+    db.session.commit()
+    return redirect('/')

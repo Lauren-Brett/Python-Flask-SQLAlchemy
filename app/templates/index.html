@@ -18,9 +18,9 @@
 
 {% for task in tasks %}
 <div style="margin-left: 5em;">
+ 
     <p>
         {{task.title}}: <b>{{task.description}}</b>
-        <br>
         {% if task.done %}
         <span>&#9989;</span>
         {%else %}
@@ -30,6 +30,12 @@
             </form>
         </span>
         {% endif %}
+        <span>
+            <form action="/tasks/{{task.id}}/delete" method="POST">
+                <input type="hidden" value="{{task.id}}" >
+                <input type="submit" value="Delete">
+            </form>
+        </span>
     </p>
 </div>
 {% endfor %}
